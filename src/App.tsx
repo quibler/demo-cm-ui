@@ -71,7 +71,7 @@ const App = () => {
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletDialogProvider>
-            <a>
+            <a href="https://demo-show-nfts.vercel.app/">
               <button>Show Wallet NFTs</button>
             </a>
             <Home
