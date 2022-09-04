@@ -1,5 +1,5 @@
 import "./App.css";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import * as anchor from "@project-serum/anchor";
 import Home from "./Home";
 import { DEFAULT_TIMEOUT } from "./connection";
@@ -55,7 +55,6 @@ const connection = new anchor.web3.Connection(rpcHost);
 
 const App = () => {
   const endpoint = useMemo(() => clusterApiUrl(network), []);
-
   const wallets = useMemo(
     () => [
       getPhantomWallet(),
@@ -72,6 +71,9 @@ const App = () => {
       <ConnectionProvider endpoint={endpoint}>
         <WalletProvider wallets={wallets} autoConnect>
           <WalletDialogProvider>
+            <a>
+              <button>Show Wallet NFTs</button>
+            </a>
             <Home
               candyMachineId={candyMachineId}
               connection={connection}

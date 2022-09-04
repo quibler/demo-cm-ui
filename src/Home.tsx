@@ -487,8 +487,11 @@ const Home = (props: HomeProps) => {
   }, [refreshCandyMachineState]);
 
   return (
-    <Container style={{ marginTop: 100 }}>
+    <Container style={{ marginTop: 10 }}>
       <Container maxWidth="xs" style={{ position: "relative" }}>
+        <h1 style={{ textAlign: "center", color: "white" }}>
+          The Crab Collection
+        </h1>
         <Paper
           style={{
             padding: 24,
@@ -497,6 +500,11 @@ const Home = (props: HomeProps) => {
             borderRadius: 6,
           }}
         >
+          <img
+            style={{ width: "100%" }}
+            src="https://f43wbi3um2eqrqohsvczvmf6ocb3lfve4s5beucmow637l57vsia.arweave.net/Lzdgo3RmiQjBx5VFmrC-cIO1lqTkuhJQTHW9v6-_rJA?ext=png"
+            alt="crabby"
+          />
           {!wallet.connected ? (
             <ConnectButton>Connect Wallet</ConnectButton>
           ) : (
@@ -639,14 +647,6 @@ const Home = (props: HomeProps) => {
               </MintContainer>
             </>
           )}
-          <Typography
-            variant="caption"
-            align="center"
-            display="block"
-            style={{ marginTop: 7, color: "grey" }}
-          >
-            Powered by METAPLEX
-          </Typography>
         </Paper>
       </Container>
 
